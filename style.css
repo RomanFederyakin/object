@@ -1,0 +1,143 @@
+ 
+        /* Добавленные стили */
+        body {
+            background-color: #d3cfcf;
+            font-family: 'Josefin Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #474343;
+        }
+
+        .navbar {
+            background-color: #747171;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #c7c5c5;
+            text-align: center;
+            padding: 10px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #5a5959;
+        }
+
+        .navbar.collapsed {
+            max-height: 0;
+            transition: max-height 0.3s ease, background-color 0.3s ease;
+        }
+
+        @keyframes slide-down {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slide-up {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-100%);
+            }
+        }
+
+        .navbar.collapsed {
+            animation: slide-up 0.3s ease;
+        }
+
+        .navbar:not(.collapsed) {
+            animation: slide-down 0.3s ease;
+        }
+
+        .menu-button {
+            font-size: 20px;
+            padding: 10px 20px;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            background-color: #797777;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .menu-button:hover {
+            opacity: 0;
+        }
+
+        section {
+            background-color: #f7f7f7;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        section.show {
+            opacity: 1;
+        }
+
+        .section-content {
+            flex: 1;
+        }
+
+        #two {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        .social-icon {
+            font-size: 24px;
+            margin: 10px;
+        }
+
+        .social-icon a {
+            padding: 10px;
+        }
+
+        .fa-facebook,
+        .fa-linkedin,
+        .fa-instagram {
+            color: #452894;
+        }
+
+        #priv {
+            padding-top: 10px;
+            text-align: center;
+            color: #474343;
+        }
+    
