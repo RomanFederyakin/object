@@ -1,158 +1,178 @@
- 
-        /* Добавленные стили */
-        body {
-            background-color: #EEE3CB;
-            font-family: 'Josefin Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #474443;
-        }
-
-        .navbar {
-            background-color: #9BABB8;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 999;
-        }
-
-        .navbar a {
-            float: left;
-            display: block;
-            color: #faf5f5;
-            text-align: center;
-            padding: 10px 16px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .navbar a:hover {
-            background-color: #5a5959;
-        }
-
-        .navbar.collapsed {
-            max-height: 0;
-            transition: max-height 0.3s ease, background-color 0.3s ease;
-        }
-
-        @keyframes slide-down {
-            from {
-                transform: translateY(-100%);
-            }
-
-            to {
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slide-up {
-            from {
-                transform: translateY(0);
-            }
-
-            to {
-                transform: translateY(-100%);
-            }
-        }
-
-        .navbar.collapsed {
-            animation: slide-up 0.3s ease;
-        }
-
-        .navbar:not(.collapsed) {
-            animation: slide-down 0.3s ease;
-        }
-
-        .menu-button {
-            font-size: 20px;
-            padding: 10px 20px;
-            display: inline-block;
-            text-align: center;
-            text-decoration: none;
-            background-color: #9BABB8;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-        }
-
-        .menu-button:hover {
-            opacity: 0;
-        }
-
-#AVA{
-   width: 300px;
-   height: 200px;
-   border-radius:50%;
+/* Стили для body */
+body {
+    background-color: #f3ecde; /* Цвет фона страницы */
+    font-family: 'Josefin Sans', sans-serif; /* Шрифт текста */
+    font-weight: 600; /* Толщина шрифта */
+    margin: 0;
+    padding: 0;
+    color: #030303; /* Цвет текста */
 }
 
+/* Стили для navbar */
+.navbar {
+    background-color: #9BABB8; /* Цвет фона навигационной панели */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
 
+.navbar a {
+    float: left;
+    display: block;
+    color: #faf5f5; /* Цвет текста ссылок в навигационной панели */
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
 
-        section {
-            background-color: #fff7f7;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ccc;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
+.navbar a:hover {
+    background-color: #5a5959; /* Цвет фона ссылок при наведении */
+}
 
-        section:last-child {
-            border-bottom: none;
-        }
+.navbar.collapsed {
+    max-height: 0;
+    transition: max-height 0.3s ease, background-color 0.3s ease;
+}
 
-        section.show {
-            opacity: 1;
-        }
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+    }
 
-        .section-content {
-            flex: 1;
-        }
+    to {
+        transform: translateY(0);
+    }
+}
 
-        #two {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+@keyframes slide-up {
+    from {
+        transform: translateY(0);
+    }
 
-        .content {
-            margin-top: 20px;
-            padding: 10px;
-        }
+    to {
+        transform: translateY(-100%);
+    }
+}
 
-        footer {
-            text-align: center;
-        }
+.navbar.collapsed {
+    animation: slide-up 0.3s ease;
+}
 
-        .social-icon {
-            font-size: 24px;
-            margin: 10px;
-        }
+.navbar:not(.collapsed) {
+    animation: slide-down 0.3s ease;
+}
 
-        .social-icon a {
-            padding: 10px;
-        }
+.menu-button {
+    font-size: 20px;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #9BABB8; /* Цвет фона кнопки меню */
+    color: #fff; /* Цвет текста кнопки меню */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
 
-        .fa-facebook,
-        .fa-linkedin,
-        .fa-instagram {
-            color: #452894;
-        }
+.menu-button:hover {
+    opacity: 0;
+}
 
-        #priv {
-            padding-top: 10px;
-            text-align: center;
-            color: #474343;
-        }
-    hr {
-  /* CSS стили для <hr> */
- border: none;
-  height: 1px;
-  background-color: gray;
-  background-image: radial-gradient(circle, gray 10%, transparent 10%);
-  background-size: 5px 5px;
-  margin: 10px 0;}
+/* Стили для изображения профиля */
+#AVA {
+    width: 300px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Стили для текста, выровненного по центру */
+.text-right {
+    text-align: center;
+}
+
+/* Стили для секций */
+section {
+    background-color: #fff7f7; /* Цвет фона секций */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc; /* Рамка снизу каждой секции */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+section.show {
+    opacity: 1;
+}
+
+.section-content {
+    flex: 1;
+}
+
+#two {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Стили для контента */
+.content {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Стили для профиля */
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+/* Стили для футера */
+footer {
+    text-align: center;
+}
+
+/* Стили для иконок социальных сетей */
+.social-icon {
+    font-size: 24px;
+    margin: 10px;
+}
+
+.social-icon a {
+    padding: 10px;
+}
+
+.fa-facebook,
+.fa-linkedin,
+.fa-instagram {
+    color: #452894; /* Цвет иконок социальных сетей */
+}
+
+/* Стили для приватности */
+#priv {
+    padding-top: 10px;
+    text-align: center;
+    color: #474343; /* Цвет текста приватности */
+}
+
+/* Стили для горизонтальной линии */
+hr {
+    /* CSS стили для <hr> */
+    border: none;
+    height: 1px;
+    background-color: gray;
+    background-image: radial-gradient(circle, gray 10%, transparent 10%);
+    background-size: 5px 5px;
+    margin: 10px 0;
+}
